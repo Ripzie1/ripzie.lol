@@ -1,0 +1,177 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+/* background image fading */
+@keyframes background_fade_kf {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.background_fade {
+    animation-timing-function: ease-in;
+    animation-name: background_fade_kf;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    visibility: visible;
+}
+
+/* background center/adjusting */
+#background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* main information section */
+.main_information {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: auto;
+    margin: auto;
+    line-height: 0.7;
+}
+
+/* social information section */
+.social_information {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+    justify-content: space-around;
+}
+
+/* hyperlink architecture override */
+a {
+    text-decoration: none;
+}
+
+/* hyperlink icon */
+.icon {
+    display: table-cell;
+    font-size: 5vh;
+    color: white;
+    text-shadow: 1px 1px 6px black;
+    padding: 40px;
+}
+
+.icon:hover {
+    transform: scale(1.15);
+}
+
+/* iframe override */
+iframe {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+/* Galaxy Fold width size */
+@media only screen and (min-width: 280px) and (max-width:653px) {
+    .icon {
+        font-size: 3.5vh;
+        padding: inherit;
+        padding-bottom: 5%;
+    }
+
+    iframe {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        float: none;
+        width: 250px;
+    }
+}
+
+/* Samsung Galaxy S8+ width size */
+@media only screen and (min-width: 360px) and (max-width:740px) {
+    .icon {
+        font-size: 3.5vh;
+        padding: inherit;
+        padding-bottom: 5%;
+    }
+
+    iframe {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        float: none;
+        width: inherit;
+    }
+}
+
+/* iPhone SE width size */
+@media only screen and (min-width: 375px) and (max-width:667px) {
+    iframe {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        float: none;
+        width: inherit;
+    }
+}
+
+/* Pixel 7 width size */
+@media only screen and (min-width: 412px) and (max-width:896px) {
+    .icon {
+        padding: 10px;
+    }
+
+    iframe {
+        height: 600px;
+    }
+}
+
+/* iPad Mini width size */
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+    .icon {
+        padding: 20px;
+    }
+
+    iframe {
+        height: 650px;
+    }
+}
+
+/* iPad Pro width size */
+@media only screen and (min-width: 1024px) and (max-width:1366px) {
+    .icon {
+        padding: 25px;
+    }
+
+    iframe {
+        height: 800px;
+    }
+}
+
+/* Nest Hub width size */
+@media only screen and (min-width: 1024px) and (max-height:600px) {
+    iframe {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+/* Nest Hub Max width size */
+@media only screen and (min-width: 1024px) and (max-height:800px) {
+    iframe {
+        width: 800px;
+        height: 600px;
+    }
+}
